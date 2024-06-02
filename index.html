@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神々の審判</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="titleScreen">
+        <h1>神々の審判</h1>
+        <h2>ジャンルを選んでください</h2>
+        <button onclick="startGame('business')">ビジネス</button>
+        <button onclick="startGame('highschool')">高校生レベル</button>
+        <button onclick="startGame('middleschool')">中学生レベル</button>
+        <button onclick="startGame('elementary')">小学生レベル</button>
+        <button onclick="startGame('random')">ランダム</button>
+        <h3>スコア: <span id="score">0</span></h3>
+        <h3>ランキング</h3>
+        <ul id="rankingList"></ul>
+    </div>
+    <div id="gameScreen" style="display: none;">
+        <h1 id="genreTitle"></h1>
+        <p id="hint1"></p>
+        <p id="hint2"></p>
+        <p id="hint3"></p>
+        <input type="text" id="guessInput" placeholder="キーワードを入力">
+        <button onclick="submitGuess()">送信</button>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
